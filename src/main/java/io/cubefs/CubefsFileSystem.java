@@ -445,4 +445,10 @@ public class CubefsFileSystem extends FileSystem {
         super.close();
         cfs.closeClient();
     }
+
+    @Override
+    public String getCanonicalServiceName() {
+        // Does not support Token
+        return null;
+    }
 }
